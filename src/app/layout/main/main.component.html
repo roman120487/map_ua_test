@@ -1,10 +1,10 @@
-<div class="wraper m-4">
+<div class="wraper p-4">
     <div class="row">
-        <div class="col-md-8">
-            <app-map></app-map>
+        <div class="col-md-9">
+            <app-map (selectMineral)="onSelectMineral($event)"></app-map>
         </div>
-        <div class="col-md-4">
-            <app-deposits></app-deposits>
+        <div class="col-md-3">
+            <app-deposits [deposits]="deposits$ | async"></app-deposits>
         </div>
     </div>
 </div>

@@ -1,6 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-import { DepositsDto } from 'src/app/models/deposits.model';
-import { DepositsService } from 'src/app/services/deposits.service';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { SelectMineralModel } from 'src/app/models/select-region.model';
 
 @Component({
   selector: 'app-map',
@@ -8,30 +7,22 @@ import { DepositsService } from 'src/app/services/deposits.service';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent implements OnInit {
-  // deposits$: DepositsModel;
+  // deposits$: DepositsDto;
+  @Output() selectMineral: EventEmitter<SelectMineralModel> = new EventEmitter();
   constructor(
-    private depositsService: DepositsService,
+
   ) { }
 
   ngOnInit(): void {
-    this.getDeposits();
+
   }
 
-  getDeposits(): void {
-    this.depositsService.getJSON().pipe(
-      // need set unsubscribe
-    ).subscribe((res) => {
-      console.log(res);
 
-    });
-  }
 
   onSelect(event: EventTarget | any): void {
     const id: string = event?.attributes?.id.nodeValue;
-    const title: string = event?.attributes?.title.nodeValue;
-    console.log('id', id);
-    console.log('title', title);
-
+    const region: string = event?.attributes?.title.nodeValue;
+    this.selectMineral.emit({ id, region })
   }
 
 }

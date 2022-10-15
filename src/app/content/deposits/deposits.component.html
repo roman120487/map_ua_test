@@ -1,1 +1,8 @@
-<p>deposits works!</p>
+<div class="wraper">
+    <div class="title">Dtposits</div>
+    <div class="row p-3"  *ngFor="let item of deposits">
+        <div class="col-md item p-1" [ngClass]="{'active': item.selected}">
+            {{item.resource}} - {{item.city}}
+        </div>
+    </div>
+</div>

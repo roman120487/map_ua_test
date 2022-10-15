@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { DepositsDto } from '../models/deposits.model';
+import { DepositsDto, ServerResponseDto } from '../models/deposits.model';
 // import { DepositsJson } from '../../assets/json/deposits.json';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class DepositsService {
     private http: HttpClient
   ) {}
 
-  public getJSON(): Observable<DepositsDto> {
-    return this.http.get<DepositsDto>(this._depositsJsonUrl);
+  public getDepositList(): Observable<ServerResponseDto> {
+    return this.http.get<ServerResponseDto>(this._depositsJsonUrl);
   }
 }
