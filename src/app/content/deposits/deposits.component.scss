@@ -10,6 +10,7 @@
     .item{
         cursor: pointer;
         font-size: 18px;
+        border-bottom: 1px solid black;
         &:hover{
             background-color: rgb(219, 219, 219);
         }

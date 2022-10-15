@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
     this.getDeposits();
   }
 
-  onSelectMineral(event: SelectMineralModel): void {
+  onSelectMineral(event: DepositsDto): void {
     console.log(event);
     this.deposits$.next(
       this.deposits$.getValue().map((elem: DepositsDto) => {
@@ -28,7 +28,7 @@ export class MainComponent implements OnInit {
         
         return {
           ...elem,
-          selected: elem.city === event.region ? true : false
+          selected: elem.id === event.id ? true : false
         }
       })
     )

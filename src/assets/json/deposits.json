@@ -4,27 +4,45 @@
         "id": "1",
         "resource": "salt",
         "city": "Vinnytsya",
-        "x": 760,
-        "y": 480,
+        "x": 430,
+        "y": 350,
         "icon": "salt",
         "visible": true
       },
       {
-        "id": "3",
+        "id": "2",
         "resource": "oil",
         "city": "Lutsk",
-        "x": 240,
-        "y": 200,
+        "x": 160,
+        "y": 130,
+        "icon": "oil",
+        "visible": true
+      },
+      {
+        "id": "3",
+        "resource": "coal",
+        "city": "Lutsk",
+        "x": 200,
+        "y": 100,
+        "icon": "coal",
+        "visible": true
+      },
+      {
+        "id": "4",
+        "resource": "oil",
+        "city": "Luhansk",
+        "x": 1060,
+        "y": 370,
         "icon": "oil",
         "visible": true
       },
       {
         "id": "5",
-        "resource": "coal",
-        "city": "Lutsk",
-        "x": 290,
-        "y": 120,
-        "icon": "coal",
+        "resource": "salt",
+        "city": "Dnipropetrovsk",
+        "x": 830,
+        "y": 400,
+        "icon": "salt",
         "visible": true
       }
     ]
