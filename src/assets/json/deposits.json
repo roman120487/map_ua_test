@@ -1,0 +1,31 @@
+{
+    "deposits": [
+      {
+        "id": "1",
+        "resource": "salt",
+        "city": "Vinnytsa",
+        "x": 760,
+        "y": 480,
+        "icon": "salt",
+        "visible": true
+      },
+      {
+        "id": "3",
+        "resource": "oil",
+        "city": "Lutsk",
+        "x": 240,
+        "y": 200,
+        "icon": "oil",
+        "visible": true
+      },
+      {
+        "id": "5",
+        "resource": "coal",
+        "city": "Lutsk",
+        "x": 290,
+        "y": 120,
+        "icon": "coal",
+        "visible": true
+      }
+    ]
+  }
